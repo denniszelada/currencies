@@ -6,7 +6,7 @@ class CryptoCompareClient
   def self.fetch_bitcoin
     response = get("?fsym=BTC&tsym=USD&limit=60&aggregate=3&e=CCCAGG")
     if response.success?
-      return response.to_json
+      return response
     else
       raise response.error
     end
